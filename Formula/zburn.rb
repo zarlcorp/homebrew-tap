@@ -19,7 +19,15 @@ class Zburn < Formula
   end
 
   def install
-    bin.install "zburn"
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "zburn_darwin_arm64" => "zburn"
+    elsif OS.mac? && Hardware::CPU.intel?
+      bin.install "zburn_darwin_amd64" => "zburn"
+    elsif OS.linux? && Hardware::CPU.arm?
+      bin.install "zburn_linux_arm64" => "zburn"
+    elsif OS.linux? && Hardware::CPU.intel?
+      bin.install "zburn_linux_amd64" => "zburn"
+    end
   end
 
   test do
