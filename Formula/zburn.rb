@@ -31,6 +31,6 @@ class Zburn < Formula
   end
 
   test do
-    assert_match "v0.3.0")
+    assert_match "v0.3.0", shell_output("#{bin}/zburn --version")
   end
 end
