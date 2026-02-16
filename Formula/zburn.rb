@@ -2,20 +2,20 @@ class Zburn < Formula
   desc "Disposable identity generator — burner emails, names, passwords"
   homepage "https://github.com/zarlcorp/zburn"
   license "MIT"
-  version "0.5.1"
+  version "0.5.2"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/zarlcorp/zburn/releases/download/v0.5.1/zburn_darwin_arm64"
-    sha256 "14f69e52a28f9fb2e904e7a34d553acdab9bf3dca24e8ca9ea1f597d93e245ea"
+    url "https://github.com/zarlcorp/zburn/releases/download/v0.5.2/zburn_darwin_arm64"
+    sha256 "313c1ed3076c8c1745586ae8e1b942ceda06d42a1fc87d743cf5105e8c5ce527"
   elsif OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/zarlcorp/zburn/releases/download/v0.5.1/zburn_darwin_amd64"
-    sha256 "73f38cd3294d056d3e5980de991fe021ad40fe4c2725596da70e374a5c3cfb5c"
+    url "https://github.com/zarlcorp/zburn/releases/download/v0.5.2/zburn_darwin_amd64"
+    sha256 "67e1234ef320a634cf382e3ff77e9220f9663d8dff4e4d7b3c7b4ff33b149d89"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/zarlcorp/zburn/releases/download/v0.5.1/zburn_linux_arm64"
-    sha256 "13a18fe316fba6ea39a73420fd2dea7e87e7edc6fee752e335a5cb7fe56e3fef"
+    url "https://github.com/zarlcorp/zburn/releases/download/v0.5.2/zburn_linux_arm64"
+    sha256 "bee91cba8cae6f5126a4aecca805236032343c5adb75a1fb0e44e7523294a67e"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/zarlcorp/zburn/releases/download/v0.5.1/zburn_linux_amd64"
-    sha256 "41a77b87d1b329e6a47b1a683929ddc6d28a599e2d353adc1d21dd681ffee42a"
+    url "https://github.com/zarlcorp/zburn/releases/download/v0.5.2/zburn_linux_amd64"
+    sha256 "5faf07972e7495dd1e41f8dc21f8098b072ab878e843a715db955c8213d6026d"
   end
 
   def install
@@ -31,6 +31,6 @@ class Zburn < Formula
   end
 
   test do
-    assert_match "v0.5.1", shell_output("#{bin}/zburn --version")
+    assert_match "v0.5.2", shell_output("#{bin}/zburn --version")
   end
 end
