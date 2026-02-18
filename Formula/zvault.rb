@@ -2,20 +2,20 @@ class Zvault < Formula
   desc "Encrypted vault for secrets and tasks — CLI and TUI"
   homepage "https://github.com/zarlcorp/zvault"
   license "MIT"
-  version "0.1.1"
+  version "0.1.2"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/zarlcorp/zvault/releases/download/v0.1.1/zvault_darwin_arm64"
-    sha256 "ea07715062a5dd7a476e6fbe29af4368caf6d256f16db8c88343ce4563a7812d"
+    url "https://github.com/zarlcorp/zvault/releases/download/v0.1.2/zvault_darwin_arm64"
+    sha256 "4786a21a838ba15e47fb6e7b308a8fe830af805760adb5dc08f1179a2029114f"
   elsif OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/zarlcorp/zvault/releases/download/v0.1.1/zvault_darwin_amd64"
-    sha256 "c995ce0c3c9e8c08850ffef748c235ff8628fe98c2f4504d10c91249ba24f344"
+    url "https://github.com/zarlcorp/zvault/releases/download/v0.1.2/zvault_darwin_amd64"
+    sha256 "0fad61aaa1e49bb176f4a50bd11a4cfc40e5e7e608f10604ea6da09ddf11ac0d"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/zarlcorp/zvault/releases/download/v0.1.1/zvault_linux_arm64"
-    sha256 "3177d95e4f29b8e093cc2166ea5058ed1df4787229147365e284d861236afcf8"
+    url "https://github.com/zarlcorp/zvault/releases/download/v0.1.2/zvault_linux_arm64"
+    sha256 "10c5c6a2f6c8875cfd79ae0a44285d48e13fd92c23d93c8efccd541434c8208d"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/zarlcorp/zvault/releases/download/v0.1.1/zvault_linux_amd64"
-    sha256 "3c9f6b47b4c3e57bb5a32ff2de85a5ce12517c27fc7aec3d351a2f521bd8c6dc"
+    url "https://github.com/zarlcorp/zvault/releases/download/v0.1.2/zvault_linux_amd64"
+    sha256 "911a4de660e709cd82234f9549bfaa3cea4a457bf659759d7012069884bb9271"
   end
 
   def install
@@ -31,6 +31,6 @@ class Zvault < Formula
   end
 
   test do
-    assert_match "v0.1.1", shell_output("#{bin}/zvault version")
+    assert_match "v0.1.2", shell_output("#{bin}/zvault version")
   end
 end
