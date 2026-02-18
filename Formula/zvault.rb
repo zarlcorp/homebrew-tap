@@ -6,16 +6,16 @@ class Zvault < Formula
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/zarlcorp/zvault/releases/download/v0.1.0/zvault_darwin_arm64"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    sha256 "33ac505d4c7677eb765836004d02b61747ec8d1b2f18cfc0a73bf110aed206fe"
   elsif OS.mac? && Hardware::CPU.intel?
     url "https://github.com/zarlcorp/zvault/releases/download/v0.1.0/zvault_darwin_amd64"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    sha256 "246de03b9f065de674bed7022077145a114c0b82f6e825d707d453e07c02fffa"
   elsif OS.linux? && Hardware::CPU.arm?
     url "https://github.com/zarlcorp/zvault/releases/download/v0.1.0/zvault_linux_arm64"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    sha256 "4c9ac839a5cb552c133577379be647fa9fe56d5bba7d7c6f096e47151894113c"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/zarlcorp/zvault/releases/download/v0.1.0/zvault_linux_amd64"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    sha256 "b451ff81248d688bc6fab44997b8f3ea2e3ab3c7556df84078111ee4fa8a1231"
   end
 
   def install
